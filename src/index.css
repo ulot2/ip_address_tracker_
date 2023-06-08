@@ -1,13 +1,155 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  padding: 3rem;
+  text-align: center;
+  background-image: url(images/pattern-bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
+}
+
+main h1 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+input {
+  height: 42px;
+  width: 89%;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+}
+
+button {
+  cursor: pointer;
+  height: 42px;
+  width: 11%;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  font-size: 20px;
+  padding-bottom: 4px;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.7;
+  border: 1px solid #000;
+}
+
+.ip-details {
+  position: absolute;
+  background-color: #fff;
+  margin-top: 35px;
+  width: 82%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.ip-details div {
+  height: 25%;
+  padding: 15px;
+}
+
+.ip-details div h6 {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #969696;
+  font-weight: 500;
+}
+
+.ip-details div p {
+  color: #2b2b2b;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+hr {
+  display: none;
+}
+
+.loading {
+  color: #fff;
+  border: 1px solid #fff;
+  width: 30%;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 404px;
+}
+
+#map {
+  position: relative;
+  top: 0rem;
+}
+
+/* DESKTOP MODE */
+@media only screen and (min-width: 1000px) {
+  /* body {
+    background-image: url(images/pattern-bg-desktop.png);
+    font-family: "Rubik", sans-serif;
+    height: 265px;
+  } */
+
+  main {
+    background-image: url(images/pattern-bg-desktop.png);
+    height: 313px;
+  }
+
+  input {
+    width: 25%;
+  }
+
+  button {
+    width: 4%;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ip-details {
+    width: 65%;
+    margin: 75px auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .ip-details div h6 {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    display: block;
+  }
+
+  .leaflet-container {
+    height: calc(100vh - 314px);
+  }
+
+  #map {
+    top: 0rem;
+  }
 }
