@@ -44,7 +44,7 @@ function App() {
           <div>
             <input
               type="text"
-              placeholder="Search for any IP address"
+              placeholder="Search for any IP address.."
               // value={ipAddress}
               onChange={(e) => setIpAddress(e.target.value)}
             />
